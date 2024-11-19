@@ -5,11 +5,6 @@ import mysql.connector
 import pandas as pd
 from mysql.connector import Error
 
-nomeColuna1 = "ID"
-nomeColuna2 = "Descrição"
-nomeColuna3 = "Fabricante"
-nomeColuna4 = "Valor"
-
 dataframe = pd.DataFrame()
 
 
@@ -173,7 +168,7 @@ def main():
                                 id = int(input("Digite o ID do aluno para deletar: "))
                                 delete_data(connection, "alunos", "alunoid", id)
                             case 4:
-                                print("Dados da tabela 'produtos':")
+                                print("Dados da tabela 'alunos':")
                                 read_data(connection, "Alunos", ["alunoid", "nome", "datanascimento", "email"])
                             case 5:
                                 break
@@ -205,7 +200,7 @@ def main():
                                 id = int(input("Digite o ID da disciplina para deletar: "))
                                 delete_data(connection, "disciplinas", "disciplinaid", id)
                             case 4:
-                                print("Dados da tabela 'produtos':")
+                                print("Dados da tabela 'disciplinas':")
                                 read_data(connection, "disciplinas", ["disciplinaid", "nome", "cargahoraria"])
                             case 5:
                                 break
